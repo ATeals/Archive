@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import Markdown from "./pages/Markdown";
 
 const router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
             {
                 path: "",
                 element: <Home />,
+            },
+            {
+                path: "/markdown",
+                element: <Markdown />,
             },
         ],
     },
