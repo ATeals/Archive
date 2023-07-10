@@ -1,12 +1,14 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { allPosts } from "contentlayer/gererated";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default () => {
+    const MDXComponent = useMDXComponent(allPosts[0].body.code);
     return (
         <>
-            <h1>hello</h1>
+            <h1 className="text-5xl">hello</h1>
+            <section className="prose">
+                <MDXComponent />
+            </section>
         </>
     );
-}
+};
