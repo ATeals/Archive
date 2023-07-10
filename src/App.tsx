@@ -1,7 +1,7 @@
 function App() {
     return (
         <>
-            <h1>Hello React with Vite!</h1>
+            <div className="text-center text-3xl font-bold">Hello React with Vite!</div>
         </>
     );
 }
