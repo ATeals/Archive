@@ -5,7 +5,29 @@ export default ({ post }: any) => {
     const MDXComponent = useMDXComponent(post.body.code);
     return (
         <>
-            <MDXComponent />
+            <section className="w-full my-5 mb-[100px]">
+                <article className="flex justify-between items-center px-3">
+                    <div className="flex items-center">
+                        <img
+                            src="https://avatars.githubusercontent.com/u/125727432?v=4"
+                            alt="profileImg"
+                            className="w-[40px] h-[40px] rounded-[50%] mr-2"
+                        />
+                        <h1>Ateals</h1>
+                    </div>
+
+                    <h4 className="text-sm "> 1시간 전</h4>
+                </article>
+                <article className="my-2 px-4">
+                    <div className="prose prose-md">
+                        <MDXComponent />
+                    </div>
+                </article>
+                <article className="flex mx-6 justify-between">
+                    <i className="bi bi-paperclip text-2xl"></i>
+                    <div className="mr-2 text-[gray]">#a #b #c</div>
+                </article>
+            </section>
         </>
     );
 };
