@@ -23,7 +23,7 @@ export default () => {
 
     return (
         <nav className="w-full bg-white bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray]">
-            {on === "" || on === "posts" ? (
+            {on === "" || on === "thread" ? (
                 <Link
                     href="/"
                     onClick={home}
