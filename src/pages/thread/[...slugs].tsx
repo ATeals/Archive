@@ -8,7 +8,7 @@ export default ({ post }: any) => {
     return (
         <>
             <main className="w-full mb-5 pt-5 pb-[100px]">
-                <PostHeader />
+                <PostHeader date={post.date} />
                 <section
                     className="my-5 w-full h-[500px] backdrop-opacity-50 pt-2 bg-fixed bg-cover bg-no-repeat bg-top"
                     style={{ backgroundImage: `url(${post.img})` }}
@@ -17,8 +17,7 @@ export default ({ post }: any) => {
                 </section>
 
                 <PostMain post={post} />
-
-                <PostFooter />
+                <PostFooter tags={post.tags} />
             </main>
         </>
     );

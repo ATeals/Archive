@@ -1,4 +1,6 @@
-export default () => {
+import { elapsedTime } from "@/lib/elapsedTime";
+
+export default ({ date }: any) => {
     return (
         <section className="flex justify-between items-center px-3">
             <div className="flex items-center">
@@ -10,7 +12,7 @@ export default () => {
                 <h1>Ateals</h1>
             </div>
 
-            <h4 className="text-sm "> 1시간 전</h4>
+            <h4 className="text-sm text-[gray]"> {elapsedTime(date)}</h4>
         </section>
     );
 };

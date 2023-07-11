@@ -4,13 +4,13 @@ import PostHeader from "./ui/PostHeader";
 import PostMain from "./ui/PostMain";
 import PostFooter from "./ui/PostFooter";
 
-export default () => {
+export default ({ post }: any) => {
     return (
         <>
             <section className="w-full my-5">
-                <PostHeader />
-                <PostMain post={allPosts[1]} />
-                <PostFooter />
+                <PostHeader date={post.date} />
+                <PostMain post={post} />
+                <PostFooter tags={post.tags} />
             </section>
             <hr />
         </>
