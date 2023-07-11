@@ -1,15 +1,55 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default () => {
+    const [on, setOn] = useState("");
+    const { asPath } = useRouter();
+    useEffect(() => {
+        const slugs = asPath.split("/");
+        setOn(slugs[1]);
+    }, [asPath]);
     return (
         <nav className="w-full bg-white bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray]">
-            <Link href="/">
-                <i className="bi bi-house text-4xl "></i>
-            </Link>
-            <i className="bi bi-bookmarks text-3xl"></i>
-            <i className="bi bi-pen text-3xl"></i>
+            {on === "" ? (
+                <Link href="/">
+                    <i className="bi bi-house-fill text-4xl "></i>
+                </Link>
+            ) : (
+                <Link href="/">
+                    <i className="bi bi-house text-4xl "></i>
+                </Link>
+            )}
+            {on === "tag" ? (
+                <Link href="/tag">
+                    <i className="bi bi-bookmarks-fill text-3xl"></i>
+                </Link>
+            ) : (
+                <Link href="/tag">
+                    <i className="bi bi-bookmarks text-3xl"></i>
+                </Link>
+            )}
+            {on === "chat" ? (
+                <Link href="/chat">
+                    <i className="bi bi-pen-fill text-3xl"></i>
+                </Link>
+            ) : (
+                <Link href="/chat">
+                    <i className="bi bi-pen text-3xl"></i>
+                </Link>
+            )}
+
             <i className="bi bi-link-45deg text-4xl "></i>
-            <i className="bi bi-person text-4xl "></i>
+
+            {on === "profile" ? (
+                <Link href="/profile">
+                    <i className="bi bi-person-fill text-4xl "></i>
+                </Link>
+            ) : (
+                <Link href="/profile">
+                    <i className="bi bi-person text-4xl "></i>
+                </Link>
+            )}
         </nav>
     );
 };
