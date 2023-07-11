@@ -3,16 +3,31 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default () => {
-    const [on, setOn] = useState("");
     const { asPath } = useRouter();
+    const [, slug] = asPath.split("/");
+    const [on, setOn] = useState("");
+
+    const home = (e: any) => {
+        if (slug === "") {
+            e.preventDefault();
+            window.scroll({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    };
+
     useEffect(() => {
-        const slugs = asPath.split("/");
-        setOn(slugs[1]);
+        setOn(slug);
     }, [asPath]);
+
     return (
         <nav className="w-full bg-white bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray]">
-            {on === "" ? (
-                <Link href="/">
+            {on === "" || on === "posts" ? (
+                <Link
+                    href="/"
+                    onClick={home}
+                >
                     <i className="bi bi-house-fill text-4xl "></i>
                 </Link>
             ) : (

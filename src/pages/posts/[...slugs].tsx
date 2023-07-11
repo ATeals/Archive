@@ -19,7 +19,7 @@ export default ({ post }: any) => {
                     <h4 className="text-sm "> 1시간 전</h4>
                 </article>
                 <article className="my-2 px-4">
-                    <div className="prose prose-md">
+                    <div className="prose prose-sm md:prose-lg">
                         <MDXComponent />
                     </div>
                 </article>
