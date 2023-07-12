@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import DarkButton from "./button/DarkButton";
 
 export default () => {
     const { asPath } = useRouter();
@@ -22,7 +23,7 @@ export default () => {
     }, [asPath]);
 
     return (
-        <nav className="w-full bg-white bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray]">
+        <nav className="w-full bg-bg dark:bg-darkBg bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray] [&>*]:dark:text-darkText">
             {on === "" || on === "thread" ? (
                 <Link
                     href="/"
@@ -54,7 +55,8 @@ export default () => {
                 </Link>
             )}
 
-            <i className="bi bi-link-45deg text-4xl "></i>
+            {/* <i className="bi bi-link-45deg text-4xl "></i> */}
+            <DarkButton />
 
             {on === "profile" ? (
                 <Link href="/profile">

@@ -9,10 +9,10 @@ export default ({ date }: any) => {
                     alt="profileImg"
                     className="w-[40px] h-[40px] rounded-[50%] mr-2"
                 />
-                <h1>Ateals</h1>
+                <h1 className="dark:text-darkText">Ateals</h1>
             </div>
 
-            <h4 className="text-sm text-[gray]"> {elapsedTime(date)}</h4>
+            <h4 className="text-sm text-[gray] dark:text-darkText"> {elapsedTime(date)}</h4>
         </section>
     );
 };

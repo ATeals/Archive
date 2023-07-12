@@ -12,7 +12,7 @@ export default ({ post }: any) => {
                 <PostMain post={post} />
                 <PostFooter tags={post.tags} />
             </section>
-            <hr />
+            <hr className="border-gray" />
         </>
     );
 };

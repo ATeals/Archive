@@ -1,7 +1,7 @@
 export default ({ tags }: any) => {
     return (
         <article className="flex mx-6 justify-between items-center">
-            <i className="bi bi-paperclip text-2xl"></i>
+            <i className="bi bi-paperclip text-2xl dark:text-darkText"></i>
             <div className="text-[gray]">
                 {tags.map((i: string, index: number) => (
                     <span
