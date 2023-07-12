@@ -1,6 +1,7 @@
 import PostMain from "@/components/pages/thread/PostMain";
 import PostFooter from "@/components/posts/ui/PostFooter";
 import PostHeader from "@/components/posts/ui/PostHeader";
+import { getPostAll } from "@/lib/post";
 import { allPosts } from "contentlayer/gererated";
 import { url } from "inspector";
 
@@ -25,7 +26,7 @@ export default ({ post }: any) => {
 
 export const getStaticPaths = async () => {
     return {
-        paths: [{ params: { slugs: ["hello", "find"] } }],
+        paths: allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).map((p) => ({ params: { slugs: p._raw.flattenedPath.split("/") } })),
         fallback: "blocking",
     };
 };
