@@ -4,10 +4,10 @@ import Main from "@/components/pages/Home/Main";
 export default () => {
     return (
         <>
-            <div className="w-full ">
+            <main className="w-full ">
                 <Header />
                 <Main />
-            </div>
+            </main>
         </>
     );
 };
