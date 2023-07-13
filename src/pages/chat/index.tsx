@@ -31,7 +31,7 @@ export default () => {
 
             <section className="w-full h-screen p-2">
                 <textarea
-                    className="w-full h-[90%]"
+                    className="w-full h-[90%] p-2"
                     value={input}
                     onChange={onChange}
                     placeholder="✍️ write....."
