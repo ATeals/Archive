@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://tealslog.vercel.app</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/chat</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/profile</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/tag</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/thread/blog/bookmark</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/thread/hello/find</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://tealslog.vercel.app/thread/hello/onelinecode</loc><lastmod>2023-07-12T10:24:14.777Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/chat</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/profile</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/tag</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/thread/blog/bookmark</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/thread/hello/find</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/thread/hello/onelinecode</loc><lastmod>2023-07-13T04:34:48.928Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
