@@ -29,29 +29,29 @@ export default () => {
                     href="/"
                     onClick={home}
                 >
-                    <i className="bi bi-house-fill text-4xl "></i>
+                    <i className="bi bi-house-fill text-3xl "></i>
                 </Link>
             ) : (
                 <Link href="/">
-                    <i className="bi bi-house text-4xl "></i>
+                    <i className="bi bi-house text-3xl "></i>
                 </Link>
             )}
             {on === "tag" ? (
                 <Link href="/tag">
-                    <i className="bi bi-bookmarks-fill text-3xl"></i>
+                    <i className="bi bi-bookmarks-fill text-2xl"></i>
                 </Link>
             ) : (
                 <Link href="/tag">
-                    <i className="bi bi-bookmarks text-3xl"></i>
+                    <i className="bi bi-bookmarks text-2xl"></i>
                 </Link>
             )}
             {on === "chat" ? (
                 <Link href="/chat">
-                    <i className="bi bi-pen-fill text-3xl"></i>
+                    <i className="bi bi-pen-fill text-2xl"></i>
                 </Link>
             ) : (
                 <Link href="/chat">
-                    <i className="bi bi-pen text-3xl"></i>
+                    <i className="bi bi-pen text-2xl"></i>
                 </Link>
             )}
 
@@ -60,11 +60,11 @@ export default () => {
 
             {on === "profile" ? (
                 <Link href="/profile">
-                    <i className="bi bi-person-fill text-4xl "></i>
+                    <i className="bi bi-person-fill text-3xl "></i>
                 </Link>
             ) : (
                 <Link href="/profile">
-                    <i className="bi bi-person text-4xl "></i>
+                    <i className="bi bi-person text-3xl "></i>
                 </Link>
             )}
         </nav>

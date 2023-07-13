@@ -1,12 +1,11 @@
 import { Post as PostItem } from "@/components/posts/Post";
 import { useForm } from "@/hook/useForm";
 import { getPostAll } from "@/lib/post";
-import { Post } from "contentlayer/gererated";
+import { PostSimple } from "@/lib/post/index.type";
 import { useEffect, useState } from "react";
-import { addSyntheticLeadingComment } from "typescript";
 
 export default () => {
-    const [posts, setPosts] = useState<Post[]>([]);
+    const [posts, setPosts] = useState<PostSimple[]>([]);
     const [{ search }, onChange, onSubmit] = useForm({ search: "" }, () => {});
 
     useEffect(() => {
@@ -23,11 +22,8 @@ export default () => {
                     type="text"
                     name="search"
                     onChange={onChange}
-                    className="border-black border-solid border w-full mr-3"
+                    className="border-black border-solid border w-full"
                 />
-                <button onClick={onSubmit}>
-                    <i className="bi bi-search"></i>
-                </button>
             </form>
             <section className="mx-3">
                 {posts.map((post) => (

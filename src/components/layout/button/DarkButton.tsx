@@ -26,12 +26,12 @@ const DarkButton = () => {
             {isDark !== undefined &&
                 (isDark ? ( //
                     <i
-                        className="bi bi-brightness-high text-3xl"
+                        className="bi bi-brightness-high text-2xl"
                         onClick={onClick}
                     ></i>
                 ) : (
                     <i
-                        className="bi bi-moon text-3xl"
+                        className="bi bi-moon text-2xl"
                         onClick={onClick}
                     ></i>
                 ))}

@@ -1,8 +1,22 @@
-import { allPosts } from "contentlayer/gererated";
+import { Post, allPosts } from "contentlayer/gererated";
 
-export const getPostAll = allPosts.filter((post) => !post._raw.sourceFilePath.includes("/index.mdx"));
+const bodyFilter = (item: Post[]) => {
+    return item.map(({ title, date, description, collection, tags, img, _id, _raw, type }) => ({
+        title,
+        date,
+        description,
+        collection,
+        tags,
+        img,
+        _id,
+        _raw,
+        type,
+    }));
+};
 
-export const getPost = (url: string) => getPostAll.find((post) => post._raw.flattenedPath === url);
+export const getPostAll = bodyFilter(allPosts).filter((post) => !post._raw.sourceFilePath.includes("/index.mdx"));
+
+export const getPost = (url: string) => allPosts.find((post) => post._raw.flattenedPath === url);
 
 // export const getTags = Array.from(
 //     new Set(
