@@ -19,7 +19,7 @@ export default () => {
     }, [input]);
 
     return (
-        <main>
+        <main className="xl:flex">
             {/* <div>
                 <input
                     type="button"
@@ -29,9 +29,9 @@ export default () => {
                 />
             </div> */}
 
-            <section className="w-full h-screen p-2">
+            <section className="w-full h-screen p-2 ">
                 <textarea
-                    className="w-full h-[90%] p-2"
+                    className="w-full h-[90%] p-2 resize-none dark:bg-darkBg dark:text-darkText"
                     value={input}
                     onChange={onChange}
                     placeholder="✍️ write....."
@@ -41,7 +41,7 @@ export default () => {
 
             <section className="w-full h-screen p-2">
                 {true && (
-                    <section className="prose h-[90%]">
+                    <section className="prose h-[90%] dark:prose-invert">
                         <ReactMarkdown
                             children={post}
                             remarkPlugins={[remarkGfm]}

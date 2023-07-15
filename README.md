@@ -4,4 +4,4 @@
 
 -   Next
 -   tailwind
--   content;ayer
+-   contentlayer
