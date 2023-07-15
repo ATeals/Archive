@@ -8,17 +8,19 @@ import { url } from "inspector";
 export default ({ post }: any) => {
     return (
         <>
-            <PostHeader date={post.date} />
-            <section
-                className="mb-5 w-full h-[500px] backdrop-opacity-50 pt-2 bg-fixed bg-cover bg-no-repeat bg-top"
-                style={{ backgroundImage: `url(${post.img})` }}
-            >
-                <h1 className="text-[white] py-[80px] text-xl text-center font-bold">{post.title}</h1>
-            </section>
+            <div className="w-full lg:w-[70%]">
+                <PostHeader date={post.date} />
+                <section
+                    className="mb-5 w-full h-[500px] backdrop-opacity-50 pt-2 bg-fixed bg-cover bg-no-repeat bg-top flex justify-center items-center"
+                    style={{ backgroundImage: `url(${post.img})` }}
+                >
+                    <h1 className="text-[white] text-xl text-center font-bold">{post.title}</h1>
+                </section>
 
-            <PostMain post={post} />
-            <div className="w-full">
-                <PostFooter tags={post.tags} />
+                <PostMain post={post} />
+                <div className="w-full">
+                    <PostFooter tags={post.tags} />
+                </div>
             </div>
         </>
     );
