@@ -8,7 +8,7 @@ export default ({ tags }: { tags: string[] }) => {
                     key={index}
                     href={`/tag?tags=${tag}`}
                 >
-                    <span className="mr-1 text-[15px] mx-2 my-1">#{tag}</span>
+                    <span className="mr-1 text-[15px] mx-2 my-1 dark:text-gray">#{tag}</span>
                 </Link>
             ))}
         </>

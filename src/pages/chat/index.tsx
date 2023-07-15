@@ -41,7 +41,7 @@ export default () => {
 
             <section className="w-full h-screen p-2">
                 {true && (
-                    <section className="prose h-[90%] dark:prose-invert">
+                    <section className="prose h-[90%] dark:prose-invert lg:prose-xl">
                         <ReactMarkdown
                             children={post}
                             remarkPlugins={[remarkGfm]}

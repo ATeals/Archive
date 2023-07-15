@@ -23,7 +23,7 @@ export default () => {
     }, [asPath]);
 
     return (
-        <nav className="w-full bg-bg dark:bg-darkBg bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray] [&>*]:dark:text-darkText">
+        <nav className="w-full bg-bg dark:bg-darkBg bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray] [&>*]:dark:text-darkText | lg:relative">
             {on === "" || on === "thread" ? (
                 <Link
                     href="/"
@@ -56,7 +56,6 @@ export default () => {
             )}
 
             {/* <i className="bi bi-link-45deg text-4xl "></i> */}
-            <DarkButton />
 
             {on === "profile" ? (
                 <Link href="/profile">
@@ -67,6 +66,8 @@ export default () => {
                     <i className="bi bi-person text-3xl "></i>
                 </Link>
             )}
+
+            <DarkButton />
         </nav>
     );
 };

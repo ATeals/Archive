@@ -28,7 +28,7 @@ export default () => {
                     type="text"
                     name="search"
                     onChange={onChange}
-                    className="border-black border-solid border w-full"
+                    className="border-black border-solid border w-full h-10 px-3 text-[20px] dark:bg-darkText"
                 />
             </form>
             <section className="mx-6">
