@@ -17,7 +17,9 @@ export default ({ post }: any) => {
             </section>
 
             <PostMain post={post} />
-            <PostFooter tags={post.tags} />
+            <div className="w-full">
+                <PostFooter tags={post.tags} />
+            </div>
         </>
     );
 };
