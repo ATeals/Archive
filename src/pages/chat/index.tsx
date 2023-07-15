@@ -19,7 +19,7 @@ export default () => {
     }, [input]);
 
     return (
-        <main className="xl:flex">
+        <>
             {/* <div>
                 <input
                     type="button"
@@ -41,7 +41,7 @@ export default () => {
 
             <section className="w-full h-screen p-2">
                 {true && (
-                    <section className="prose h-[90%] dark:prose-invert lg:prose-xl">
+                    <section className="prose h-[90%] dark:prose-invert md:prose-lg lg:prose-xl">
                         <ReactMarkdown
                             children={post}
                             remarkPlugins={[remarkGfm]}
@@ -49,6 +49,6 @@ export default () => {
                     </section>
                 )}
             </section>
-        </main>
+        </>
     );
 };

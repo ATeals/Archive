@@ -22,7 +22,7 @@ export default () => {
         <>
             <form
                 onSubmit={onSubmit}
-                className="flex justify-center items-center m-5"
+                className="w-full p-10"
             >
                 <input
                     type="text"

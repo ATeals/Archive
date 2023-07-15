@@ -23,7 +23,7 @@ export default () => {
     }, [asPath]);
 
     return (
-        <nav className="w-full bg-bg dark:bg-darkBg bottom-0 p-3 z-99 fixed  flex justify-around [&>*]:text-[gray] [&>*]:dark:text-darkText | lg:relative">
+        <nav className="w-full bg-bg dark:bg-darkBg bottom-0 p-3 z-99 fixed  flex justify-around items-center [&>*]:text-[gray] [&>*]:dark:text-darkText | lg:h-full lg:flex-col lg:justify-start lg:py-[50px] lg:[&>*]:my-5 lg:px-5 lg:w-auto">
             {on === "" || on === "thread" ? (
                 <Link
                     href="/"

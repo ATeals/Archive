@@ -7,7 +7,7 @@ import PostFooter from "./ui/PostFooter";
 export const Post = ({ post }: any) => {
     return (
         <>
-            <section className="w-full my-5">
+            <section className="w-full my-5 lg:w-[800px]">
                 <PostHeader date={post.date} />
                 <PostMain post={post} />
                 <PostFooter tags={post.tags} />
