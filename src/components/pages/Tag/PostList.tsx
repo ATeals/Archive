@@ -1,6 +1,6 @@
 import { Post as PostItem } from "@/components/posts/Post";
 import { useForm } from "@/hook/useForm";
-import { getPostAll } from "@/lib/post";
+import { getPostAll, getTagAll } from "@/lib/post";
 import { PostSimple } from "@/lib/post/index.type";
 import { useEffect, useState } from "react";
 import TagList from "./TagList";
@@ -16,7 +16,7 @@ export default () => {
     }, [search]);
 
     useEffect(() => {
-        setPosts(getPostAll.filter((post) => post.tags?.includes(tags)));
+        if (tags) setPosts(getPostAll.filter((post) => post.tags?.includes(tags)));
     }, [tags]);
     return (
         <>
@@ -31,8 +31,8 @@ export default () => {
                     className="border-black border-solid border w-full"
                 />
             </form>
-            <section>
-                <TagList tags={["React", "코테"]} />
+            <section className="mx-6">
+                <TagList tags={getTagAll} />
             </section>
             <section className="mx-3">
                 {posts.map((post) => (

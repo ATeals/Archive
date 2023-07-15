@@ -18,22 +18,11 @@ export const getPostAll = bodyFilter(allPosts).filter((post) => !post._raw.sourc
 
 export const getPost = (url: string) => allPosts.find((post) => post._raw.flattenedPath === url);
 
-// export const getTags = Array.from(
-//     new Set(
-//         allPosts
-//             .filter((i) => i.tags)
-//             .map((i) => i.tags)
-//             .reduce((start, index) => [...start, ...index], [])
-//     )
-// ).map((tag, index) => {
-//     const colors = getColor;
-//     return {
-//         tag,
-//         color: {
-//             text: colors[index % colors.length].text,
-//             bg: colors[index % colors.length].bg,
-//             darkText: "#f5f5f5",
-//             darkBg: "#5172A5",
-//         },
-//     };
-// });
+export const getTagAll = Array.from(
+    new Set(
+        getPostAll
+            .filter((i) => i.tags)
+            .map((i) => i.tags)
+            .reduce((start: any, index: any) => [...start, ...index], [])
+    )
+);
